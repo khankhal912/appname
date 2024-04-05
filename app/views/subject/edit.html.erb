@@ -1,0 +1,18 @@
+<div class="subject">
+    <div class="back-list">
+        <%= link_to('BACK TO LIST', '/subject', :class => 'btn')%>
+    </div>
+
+    <div class="subject detail new">
+        <h1>Update Subject</h1>
+        <%# <%= form_with(model: @subject, url: subject_path(@subject), method: "post") do |f| %>
+        <%= form_for @subject, url: subject_path(@subject), method: :patch do |f| %>
+            <%= render(:partial => 'form', :locals => {:f => f}) %>
+            <div class = "form_buttons">
+                <%= f.submit("Update Subject")%>
+            </div>
+        <%end%>
+    </div>
+</div>
+
+<%= stylesheet_link_tag "subject" %>

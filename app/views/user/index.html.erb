@@ -1,0 +1,19 @@
+<h3>USERS LIST</h3>   
+<br>    
+<table class="table table-bordered table-striped">   
+    <tr>   
+        <th>First Name</th>   
+        <th>Last Name</th>   
+        <th>Email</th>   
+        <th>Username</th>   
+    </tr>   
+    
+    <% @users.each do |product| %>   
+    <tr class="text-center">   
+        <td><%= product.first_name %></td>   
+        <td><%= product.last_name %></td> 
+        <td><%= product.email %></td> 
+        <td><%= product.username %></td> 
+    </tr>   
+    <% end %>   
+</table>  
