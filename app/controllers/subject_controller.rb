@@ -2,6 +2,8 @@ class SubjectController < ApplicationController
   layout 'admin'
   def index
     @subjects = Subject.sorted
+  explicit_block { puts "Explicit block called" }
+  do_something_with_block
   end
 
   def show
@@ -45,6 +47,15 @@ class SubjectController < ApplicationController
     @subject.destroy
     flash[:notice] = "Subject removed successfully...." 
     redirect_to('/subject')
+  end
+
+  def explicit_block(&block)
+    block.call
+  end
+
+  def do_something_with_block
+    return "No block given" unless block_given?
+    yield
   end
 
   private
