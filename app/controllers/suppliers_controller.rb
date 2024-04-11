@@ -8,6 +8,7 @@ class SuppliersController < ApplicationController
 
   # GET /suppliers/1 or /suppliers/1.json
   def show
+    @supplier = set_supplier
   end
 
   # GET /suppliers/new

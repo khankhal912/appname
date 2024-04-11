@@ -9,7 +9,7 @@
         <%= form_for @subject, url: subject_path(@subject), method: :patch do |f| %>
             <%= render(:partial => 'form', :locals => {:f => f}) %>
             <div class = "form_buttons">
-                <%= f.submit("Update Subject")%>
+                <%= f.submit 'Update Subject', :class => 'btn submit-btn'%>
             </div>
         <%end%>
     </div>

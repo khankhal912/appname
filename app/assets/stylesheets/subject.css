@@ -29,11 +29,11 @@ tr:nth-child(even) {
 }
 
 .back-list {
-    text-align: end;
+  text-align: end;
 }
 
 .add-btn {
-    padding: 10px 0px 12px;
+  padding: 10px 0px 12px;
 }
 
 .btn {
@@ -44,4 +44,8 @@ tr:nth-child(even) {
   background: #000;
   border-radius: 100px;
   font-size: 13px;
+}
+
+.submit-btn {
+  margin-top: 8px;
 }

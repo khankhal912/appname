@@ -1,4 +1,6 @@
 class Subject < ApplicationRecord
+    # validates :name, presence: true
+    # validates :postition, presence: true
     # has_many :pages 
     has_one :page 
 

@@ -9,7 +9,7 @@
         <%= form_for @subject, url: '/subject', method: :post do |f| %>
             <%= render(:partial => 'form', :locals => {:f => f}) %>
             <div class = "form_buttons">
-                <%= f.submit("Cerate Subject")%>
+                <%= f.submit 'Create Subject', :class => 'btn submit-btn'%>
             </div>
         <%end%>
     </div>

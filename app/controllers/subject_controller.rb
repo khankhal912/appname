@@ -1,5 +1,6 @@
 class SubjectController < ApplicationController
   layout 'admin'
+  http_basic_authenticate_with name: "dhh", password: "dhh", except: [:index, :show]
   def index
     @subjects = Subject.sorted
   explicit_block { puts "Explicit block called" }
